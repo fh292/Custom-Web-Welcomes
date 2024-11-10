@@ -10,8 +10,8 @@ public class DemoController {
     }
 
     @PostMapping("/farewell")
-    String farewell(@RequestBody String name){
-        return "Goodbye, " + name +"!";
+    String farewell(@RequestBody Person person){
+        return "Goodbye, " + person.getFirstName() + person.getLastName() +"!";
     }
 
 }
